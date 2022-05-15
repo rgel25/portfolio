@@ -43,7 +43,6 @@ h1 {
 
 h2 {
   font-size: calc(1.3rem + 1.8vw);
-  color: var(--red-400);
   writing-mode: vertical-lr;
   grid-column: 3/4;
   grid-row: 2/5;
@@ -53,6 +52,21 @@ h2 {
   margin-right: -10px;
   line-height: 1.2em;
   text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+h2 a {
+  color: var(--red-400);
+  text-decoration: none;
+}
+
+h2:hover {
+  transform: scale(1.05);
+  color: #f03129;
+}
+
+h2 a:hover {
+  color: #f03129;
 }
 
 .landing-subtitle {
@@ -63,7 +77,7 @@ h2 {
   grid-row: 3;
   grid-column: 4/6;
   align-self: end;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .landing-nav {
@@ -87,13 +101,6 @@ h2 {
   text-decoration: none;
   width: 100%;
   display: block;
-}
-
-.landing-nav ul a.fill-div {
-  display: block;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
 }
 
 .landing-nav li {
@@ -125,7 +132,6 @@ h2 {
   main {
     padding-top: 0;
     padding-bottom: 0;
-    height: calc(100vh + 50px);
   }
 }
 
@@ -183,7 +189,12 @@ h2 {
     padding-bottom: 5rem;
   }
   .landing-subtitle {
-    font-size: 1.1em;
+    font-size: 0.85em;
+  }
+}
+@media screen and (min-width: 999px) {
+  .landing-subtitle {
+    font-size: 1.2em;
   }
 }
 
@@ -195,6 +206,10 @@ h2 {
   .landing-page {
     width: 60vw;
   }
+
+  .landing-subtitle {
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (min-width: 1300px) {
@@ -205,11 +220,18 @@ h2 {
   .landing-page {
     width: 49vw;
   }
+
+  .landing-subtitle {
+    font-size: 1.4em;
+  }
 }
 
 @media screen and (min-width: 1500px) {
   main {
     padding-top: 0px;
+  }
+  .landing-subtitle {
+    font-size: 1.5em;
   }
 }
 
@@ -236,7 +258,7 @@ h2 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 0.15em; /* Adjust as needed */
+  letter-spacing: 0.05em; /* Adjust as needed */
   animation: typing 4s steps(30, end), blink-caret 1s step-end 3;
 }
 
