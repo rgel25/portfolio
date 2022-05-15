@@ -4,14 +4,24 @@ const navMenu = document.getElementsByClassName("nav-menu")[0];
 const navLinks = document.querySelectorAll(".nav-menu>ul>li");
 const navLinksA = document.querySelectorAll(".nav-menu>ul>li>a");
 const section = document.querySelectorAll("section");
+// let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
   if (window.scrollY >= window.innerHeight) {
     nav.classList.add("show-nav");
   } else {
     nav.classList.remove("show-nav");
     minimize();
   }
+
+  // if (
+  //   prevScrollpos > currentScrollPos &&
+  //   window.scrollY >= window.innerHeight
+  // ) {
+  //   nav.classList.toggle("show-nav");
+  // }
+  // prevScrollpos = currentScrollPos;
 };
 
 navButtonExpand.addEventListener("click", expand);

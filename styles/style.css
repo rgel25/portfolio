@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Jost", sans-serif;
   color: var(--dark-400);
+  background-color: var(--bg-main);
 }
 
 /* MAIN/LANDING PAGE = START */
@@ -309,6 +310,7 @@ nav {
   display: none;
   padding-top: 1vh;
   background-color: var(--bg-main);
+  padding-bottom: 15px;
 }
 
 .show-nav {
@@ -467,6 +469,7 @@ h3 a {
   list-style: none;
   justify-content: center;
   text-align: center;
+  max-width: 462px;
 }
 
 .skill-set ul li {
@@ -479,7 +482,9 @@ h3 a {
 }
 
 .about-image {
-  width: 80%;
+  max-width: 462px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .about-image img {
@@ -487,13 +492,149 @@ h3 a {
 }
 
 .about-bio {
-  width: 80%;
+  max-width: 462px;
+  padding: 2rem;
 }
 
 .about-bio h5 {
   font-size: 1.5em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about-bio p {
+  font-size: 1em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.about-personal-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-personal-links a {
+  color: var(--dark-400);
+  text-decoration: none;
+  transition: scale 0.2s ease-in-out;
+  margin: 2px;
+}
+
+.about-personal-links a i {
+  margin-right: 5px;
   font-size: 1.2em;
+}
+.about-personal-links a:hover {
+  transform: scale(1.1);
+  color: var(--red-400);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr 0.9fr 2.9fr 0.6fr 0.6fr;
+    grid-template-rows: 0.2fr 0.4fr 2.7fr 1.1fr;
+    gap: 16px 16px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". . header skill skill ."
+      ". image image bio bio ."
+      ". image image . links .";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .skill {
+    grid-area: skill;
+  }
+
+  .image {
+    grid-area: image;
+  }
+
+  .bio {
+    grid-area: bio;
+  }
+
+  .links {
+    grid-area: links;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr 0.9fr 2.9fr 0.6fr 0.6fr;
+    grid-template-rows: 0.2fr 0.4fr 2.7fr 1.1fr;
+    gap: 32px 16px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". . header skill skill ."
+      ". image image bio bio ."
+      ". image image links links .";
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .about-header {
+    grid-area: header;
+    max-width: 100%;
+    align-self: start;
+    text-align: right;
+  }
+
+  .skill-set {
+    grid-area: skill;
+    max-width: 600px;
+    align-self: start;
+  }
+
+  .skill-set ul {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .about-image {
+    grid-area: image;
+    max-width: 100%;
+    padding: 0;
+    align-self: start;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about-bio {
+    grid-area: bio;
+    max-width: 100%;
+    font-size: 1.5em;
+    padding: 0;
+    align-self: start;
+    padding-left: 2rem;
+  }
+
+  .about-bio h5 {
+    margin-top: 0rem;
+  }
+
+  .about-personal-links {
+    grid-area: links;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 1.2em;
+    align-items: start;
+    border-bottom: 25px solid var(--red-400);
+  }
+
+  .about-personal-links a {
+    margin-right: 15px;
+  }
 }
