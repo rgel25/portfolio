@@ -18,3 +18,12 @@ I tweaked several things in this animation, mainly:
 - The color of the cursor
 - The speed of animation
 - Number of loops the cursor animation plays
+
+# Nav Bar
+
+Took inspiration from [Alejandro Aspinwall](https://aaspinwall.com/) in terms of general design. Build this nav bar from the ground up. Here are some nice features of this section:
+
+- Responsive nav bar, collapses on smaller screens
+- Active li > a states for the page section being viewed
+- Nav bar only visible after landing page
+- Responsive nav bar closes after selecting a link, clicking the expand button again, and scrolling up to the landing page.
