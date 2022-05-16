@@ -304,17 +304,21 @@ h2 a:hover {
 /* NAV - START */
 
 nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  display: none;
   padding-top: 1vh;
   background-color: var(--bg-main);
   padding-bottom: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: top 500ms;
 }
 
 .show-nav {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .nav-content {
@@ -513,6 +517,8 @@ h3 a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 25px solid var(--red-400);
+  width: 80%;
 }
 
 .about-personal-links a {
@@ -532,39 +538,6 @@ h3 a {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    display: grid;
-    grid-template-columns: 0.2fr 0.8fr 0.9fr 2.9fr 0.6fr 0.6fr;
-    grid-template-rows: 0.2fr 0.4fr 2.7fr 1.1fr;
-    gap: 16px 16px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". . . . . ."
-      ". . header skill skill ."
-      ". image image bio bio ."
-      ". image image . links .";
-  }
-
-  .header {
-    grid-area: header;
-  }
-
-  .skill {
-    grid-area: skill;
-  }
-
-  .image {
-    grid-area: image;
-  }
-
-  .bio {
-    grid-area: bio;
-  }
-
-  .links {
-    grid-area: links;
-  }
-
   #about {
     display: grid;
     grid-template-columns: 0.2fr 0.8fr 0.9fr 2.9fr 0.6fr 0.6fr;
@@ -591,11 +564,13 @@ h3 a {
     grid-area: skill;
     max-width: 600px;
     align-self: start;
+    padding-left: 2rem;
   }
 
   .skill-set ul {
     padding: 0;
     max-width: 100%;
+    justify-content: start;
   }
 
   .about-image {
@@ -626,12 +601,12 @@ h3 a {
 
   .about-personal-links {
     grid-area: links;
+    width: 100%;
     max-width: 100%;
     flex-direction: row;
     justify-content: end;
     font-size: 1.2em;
     align-items: start;
-    border-bottom: 25px solid var(--red-400);
   }
 
   .about-personal-links a {

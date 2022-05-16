@@ -4,7 +4,7 @@ const navMenu = document.getElementsByClassName("nav-menu")[0];
 const navLinks = document.querySelectorAll(".nav-menu>ul>li");
 const navLinksA = document.querySelectorAll(".nav-menu>ul>li>a");
 const section = document.querySelectorAll("section");
-// let prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
@@ -15,13 +15,19 @@ window.onscroll = function () {
     minimize();
   }
 
-  // if (
-  //   prevScrollpos > currentScrollPos &&
-  //   window.scrollY >= window.innerHeight
-  // ) {
-  //   nav.classList.toggle("show-nav");
+  if (prevScrollpos > currentScrollPos) {
+    nav.style.top = "0px";
+  } else if (window.scrollY == window.innerHeight) {
+    nav.style.top = "0px";
+  } else {
+    console.log("scrolled down");
+    nav.style.top = "-100px";
+  }
+
+  // if (window.scrollY >= window.innerHeight) {
+  //   nav.style.top = "0px";
   // }
-  // prevScrollpos = currentScrollPos;
+  prevScrollpos = currentScrollPos;
 };
 
 navButtonExpand.addEventListener("click", expand);
