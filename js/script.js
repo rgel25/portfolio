@@ -20,13 +20,8 @@ window.onscroll = function () {
   } else if (window.scrollY == window.innerHeight) {
     nav.style.top = "0px";
   } else {
-    console.log("scrolled down");
     nav.style.top = "-100px";
   }
-
-  // if (window.scrollY >= window.innerHeight) {
-  //   nav.style.top = "0px";
-  // }
   prevScrollpos = currentScrollPos;
 };
 

@@ -32,3 +32,7 @@ Took inspiration from [Alejandro Aspinwall](https://aaspinwall.com/) in terms of
 
 Took inspiration from [Alejandro Aspinwall](https://aaspinwall.com/) again in terms of general design. For screen with small sizes, I used flex for the layout and once it goes to
 768px and above, the layout transitions to grid with the items in different arrangement.
+
+# Needed features
+
+Show Nav on link scroll after all contents are in
