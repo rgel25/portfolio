@@ -607,9 +607,22 @@ h3 a {
     justify-content: end;
     font-size: 1.2em;
     align-items: start;
+    align-self: start;
   }
 
   .about-personal-links a {
     margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  #about .about-bio h5 {
+    font-size: 1.2em;
+  }
+  #about .about-bio p {
+    font-size: 0.8em;
+  }
+  .skill-set ul li {
+    font-size: 1em;
   }
 }
