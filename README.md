@@ -27,3 +27,8 @@ Took inspiration from [Alejandro Aspinwall](https://aaspinwall.com/) in terms of
 - Active li > a states for the page section being viewed
 - Nav bar only visible after landing page
 - Responsive nav bar closes after selecting a link, clicking the expand button again, and scrolling up to the landing page.
+
+# About Me
+
+Took inspiration from [Alejandro Aspinwall](https://aaspinwall.com/) again in terms of general design. For screen with small sizes, I used flex for the layout and once it goes to
+768px and above, the layout transitions to grid with the items in different arrangement.
