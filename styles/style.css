@@ -402,6 +402,7 @@ nav {
 }
 
 .active {
+  font-weight: 700;
   border-bottom: 10px solid var(--dark-400);
 }
 
@@ -799,7 +800,7 @@ h3 a {
 
 .project-gap {
   height: 15px;
-  width: 92%;
+  width: 80%;
   margin: auto;
   background-color: var(--red-400);
 }
@@ -908,6 +909,144 @@ h3 a {
   }
 
   .cta-container a {
+    font-size: 1.2em;
+  }
+}
+
+/* PROJECTS - END */
+/* PLAYGROUND - START */
+
+#playground {
+  min-height: calc(100vh - 0px);
+}
+
+.playground-area {
+  margin: auto;
+  padding: 2rem;
+  max-width: 600px;
+  min-height: calc(100vh - 0px);
+}
+
+.playground-header {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.playground-header h5 {
+  margin-bottom: 1rem;
+  font-size: 2em;
+  border-bottom: 10px solid var(--red-400);
+  width: auto;
+  display: inline-block;
+}
+
+.playground-header p {
+  line-height: 1.2;
+}
+
+.site-card {
+  margin: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  max-width: 350px;
+  border-bottom: 10px solid var(--red-400);
+}
+
+.card-preview {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.card-preview img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-header h6 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-cta {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-cta a {
+  color: var(--dark-400);
+  text-decoration: none;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  background-color: var(--dark-400);
+  color: var(--off-white);
+  border-radius: 0.325rem;
+  font-weight: 700;
+  font-size: 0.8em;
+  box-shadow: inset 0 0 0 0 #31302b;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 800ms;
+}
+
+.card-cta a:hover {
+  box-shadow: inset 200px 0 0 0 var(--red-400);
+  color: var(--off-white);
+}
+
+.card-cta a i {
+  margin-right: 5px;
+}
+
+.playground-footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .playground-area {
+    padding: 2rem 3rem;
+    max-width: 100%;
+  }
+
+  .playground-header {
+    padding: 0 5rem;
+  }
+
+  .playground-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .site-card {
+    margin: 0;
+    max-width: 335px;
+    margin-bottom: 5rem;
+  }
+
+  .card-cta a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .playground-area {
+    width: 80vw;
+    max-width: 1200px;
+    padding: 0;
+  }
+
+  .playground-header p,
+  .playground-footer p {
     font-size: 1.2em;
   }
 }

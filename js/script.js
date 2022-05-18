@@ -20,6 +20,7 @@ window.onscroll = function () {
   } else if (window.scrollY == window.innerHeight) {
     nav.style.top = "0px";
   } else {
+    navMenu.classList.remove("show-nav-menu");
     nav.style.top = "-100px";
   }
   prevScrollpos = currentScrollPos;
